@@ -1,0 +1,12 @@
+# Optional: run PostgreSQL in Docker instead of installing it on Windows.
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: inventory_user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in your shell}
+      POSTGRES_DB: unified_inventory
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+volumes:
+  pgdata:

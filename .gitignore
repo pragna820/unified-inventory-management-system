@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+node_modules/
+dist/
+data/full/
+data/exports/*.csv
+data/exports/*.json
+.pytest_cache/
+.vscode/
+*.log
+.env.*
+!.env.example
